@@ -1,0 +1,49 @@
+{
+  "name": "eslint-plugin-web",
+  "version": "0.2.0",
+  "author": "\u552f\u7136<weiran.zsd@outlook.com",
+  "description": "Additional ESLint's rules for web.",
+  "main": "./lib/index.js",
+  "scripts": {
+    "test": "mocha \"tests/**/*.js\"",
+    "lint": "eslint ."
+  },
+  "gitHooks": {
+    "pre-commit": "lint-staged"
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint --fix",
+      "git add"
+    ],
+    "*.md": "markdownlint"
+  },
+  "files": [
+    "LICENSE",
+    "readme.md",
+    "lib"
+  ],
+  "repository": "https://github.com/aladdin-add/eslint-plugin/tree/master/packages/web",
+  "homepage": "https://github.com/aladdin-add/eslint-plugin/tree/master/packages/web",
+  "bugs": "https://github.com/aladdin-add/eslint-plugin/issues/",
+  "peerDependencies": {
+    "eslint": ">4"
+  },
+  "devDependencies": {
+    "lint-staged": "^10.5.3",
+    "markdownlint": "^0.22.0",
+    "mocha": "^8.2.1",
+    "yorkie": "^2.0.0"
+  },
+  "keywords": [
+    "ast",
+    "lint",
+    "javascript",
+    "ecmascript",
+    "espree"
+  ],
+  "license": "MIT",
+  "engines": {
+    "node": ">=18"
+  }
+}
